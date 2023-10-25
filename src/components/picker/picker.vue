@@ -2,13 +2,13 @@
  * @Description: 
  * @Author: Ag
  * @LastEditors: Ag
- * @LastEditTime: 2023-10-25 14:21:56
+ * @LastEditTime: 2023-10-25 14:47:32
  * Copyright (c) 2023 by CIGLINK, All Rights Reserved. 
 -->
 <template>
   <n-config-provider :theme-overrides="themeOverrides">
     <n-tag v-if="props.justTag" class="v3-currency-tag" v-bind="$attrs">
-      <svg-icon :icon="findCurrency(pickerValue)?.flag || ''" size="2em" />
+      <n-image width="28" previewDisabled :src="findCurrency(pickerValue)?.flag || ''" />
       <slot name="tag-text" :currency="findCurrency(pickerValue)">
         <span>{{ pickerValue }}</span>
         <span v-if="props.labelShowName">{{ findCurrency(pickerValue)?.name }}</span>
@@ -150,7 +150,7 @@ const findCurrency = (currency) => {
   }
 }
 .v3-currency-picker {
-  :deep(.n-base-pickerion-input__content) {
+  :deep(.n-base-selection-input__content) {
     .v3-currency-picker__label,
     .v3-currency-picker__tag {
       display: flex;
@@ -171,7 +171,7 @@ const findCurrency = (currency) => {
 </style>
 
 <style lang="scss">
-.n-base-picker-option {
+.n-base-select-option {
   .v3-currency-picker__label {
     display: flex;
     align-items: center;
@@ -188,7 +188,7 @@ const findCurrency = (currency) => {
     color: #acacac;
   }
 
-  &.n-base-picker-option--pickered {
+  &.n-base-select-option--selected {
     .v3-currency-picker__label_name {
       color: var(--n-option-text-color-active);
     }

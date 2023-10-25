@@ -2,7 +2,7 @@
  * @Description:
  * @Author: Ag
  * @LastEditors: Ag
- * @LastEditTime: 2023-10-25 13:57:34
+ * @LastEditTime: 2023-10-25 14:47:44
  * Copyright (c) 2023 by CIGLINK, All Rights Reserved.
  */
 import CurrencyPicker from './picker.vue'
