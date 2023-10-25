@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Ag
  * @LastEditors: Ag
- * @LastEditTime: 2023-10-25 14:03:04
+ * @LastEditTime: 2023-10-25 14:21:56
  * Copyright (c) 2023 by CIGLINK, All Rights Reserved. 
 -->
 <template>
@@ -15,7 +15,7 @@
       </slot>
     </n-tag>
 
-    <n-picker
+    <n-select
       v-else
       class="v3-currency-picker"
       v-model:value="pickerValue"
