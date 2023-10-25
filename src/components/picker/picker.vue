@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Ag
  * @LastEditors: Ag
- * @LastEditTime: 2023-10-25 14:47:32
+ * @LastEditTime: 2023-10-25 15:31:58
  * Copyright (c) 2023 by CIGLINK, All Rights Reserved. 
 -->
 <template>
@@ -26,6 +26,7 @@
       :options="props.options"
       :render-label="renderLabel"
       :render-tag="props.multiple ? renderMultiplePickerTag : renderSinglePickerTag"
+      :consistent-menu-width="false"
       v-bind="$attrs"
     />
   </n-config-provider>
