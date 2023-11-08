@@ -1,6 +1,6 @@
 {
   "name": "vue3-currency-picker",
-  "version": "0.1.4",
+  "version": "0.2.1",
   "description": "Currency picker component for Vue 3",
   "private": false,
   "author": {

@@ -2,14 +2,14 @@
  * @Description:
  * @Author: Ag
  * @LastEditors: Ag
- * @LastEditTime: 2023-10-25 14:47:44
+ * @LastEditTime: 2023-11-08 10:56:16
  * Copyright (c) 2023 by CIGLINK, All Rights Reserved.
  */
 import CurrencyPicker from './picker.vue'
-import currencyMap from './currencyMap.js'
+import currencyList from './currencyList.js'
 
 // 按需引入
-export { CurrencyPicker, currencyMap }
+export { CurrencyPicker, currencyList }
 
 const comps = [CurrencyPicker]
 

@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import currencyMap from './currencyMap'
+import currencyList from './currencyList'
 import { NTag, NImage } from 'naive-ui'
 
 defineOptions({
@@ -48,7 +48,7 @@ const props = defineProps({
   },
   options: {
     type: Array,
-    default: () => currencyMap
+    default: () => currencyList
   },
   multiple: {
     type: Boolean,
@@ -135,7 +135,7 @@ const renderMultiplePickerTag = ({ option, handleClose }) => {
 }
 
 const findCurrency = (currency) => {
-  return currencyMap.find((item) => item.currency === currency) || {}
+  return props.options.find((item) => item.currency === currency) || {}
 }
 </script>
 
