@@ -1,12 +1,3 @@
-/*
- * @Description:
- * @Author: Ag
- * @LastEditors: Ag
- * @LastEditTime: 2023-11-08 10:33:26
- * Copyright (c) 2023 by CIGLINK, All Rights Reserved.
- */
-// https://openexchangerates.org/api/currencies.json
-
 export default [
   {
     currency: 'AUD',

@@ -1,10 +1,3 @@
-/*
- * @Description:
- * @Author: Ag
- * @LastEditors: Ag
- * @LastEditTime: 2023-10-25 14:49:11
- * Copyright (c) 2023 by CIGLINK, All Rights Reserved.
- */
 import { createApp } from 'vue'
 import App from './App.vue'
 import CurrencyPicker from '../dist/index.mjs' //导入

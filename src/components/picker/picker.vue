@@ -1,17 +1,10 @@
-<!--
- * @Description: 
- * @Author: Ag
- * @LastEditors: Ag
- * @LastEditTime: 2023-10-25 15:31:58
- * Copyright (c) 2023 by CIGLINK, All Rights Reserved. 
--->
 <template>
   <n-config-provider :theme-overrides="themeOverrides">
     <n-tag v-if="props.justTag" class="v3-currency-tag" v-bind="$attrs">
-      <n-image width="28" previewDisabled :src="findCurrency(pickerValue)?.flag || ''" />
+      <n-image width="28" previewDisabled :src="findCurrency(pickerValue)?.[flagField] || ''" />
       <slot name="tag-text" :currency="findCurrency(pickerValue)">
         <span>{{ pickerValue }}</span>
-        <span v-if="props.labelShowName">{{ findCurrency(pickerValue)?.name }}</span>
+        <span v-if="props.labelShowName">{{ findCurrency(pickerValue)?.[nameField] }}</span>
       </slot>
     </n-tag>
 
@@ -49,6 +42,14 @@ const props = defineProps({
   options: {
     type: Array,
     default: () => currencyList
+  },
+  nameField: {
+    type: String,
+    default: 'name'
+  },
+  flagField: {
+    type: String,
+    default: 'flag'
   },
   multiple: {
     type: Boolean,
@@ -100,21 +101,23 @@ const pickerValue = computed({
 
 const renderLabel = (option) => {
   return h('div', { class: 'v3-currency-picker__label' }, [
-    typeof option.flag === 'function'
-      ? option.flag()
-      : h(NImage, { src: option.flag || '', width: '28', previewDisabled: true }),
+    typeof option[props.flagField] === 'function'
+      ? option[props.flagField]()
+      : h(NImage, { src: option[props.flagField] || '', width: '28', previewDisabled: true }),
     h('span', { class: 'v3-currency-picker__label_code' }, option.currency),
-    props.optionShowName && h('span', { class: 'v3-currency-picker__label_name' }, option.name)
+    props.optionShowName &&
+      h('span', { class: 'v3-currency-picker__label_name' }, option[props.nameField])
   ])
 }
 
 const renderSinglePickerTag = ({ option }) => {
   return h('div', { class: 'v3-currency-picker__tag' }, [
     h('span', { class: 'v3-currency-picker__tag_code' }, option.currency),
-    props.labelShowName && h('span', { class: 'v3-currency-picker__tag_name' }, option.name),
-    typeof option.flag === 'function'
-      ? option.flag()
-      : h(NImage, { src: option.flag || '', width: '28', previewDisabled: true })
+    props.labelShowName &&
+      h('span', { class: 'v3-currency-picker__tag_name' }, option[props.nameField]),
+    typeof option[props.flagField] === 'function'
+      ? option[props.flagField]()
+      : h(NImage, { src: option[props.flagField] || '', width: '28', previewDisabled: true })
   ])
 }
 

@@ -49,15 +49,17 @@ const form = reactive({
 
 此外，组件本身的props如下：
 
-| Prop Name      | Type                                                  | Default      | Description                        |
-| :------------- | ----------------------------------------------------- | ------------ | ---------------------------------- |
-| value          | `Array<string \| number> \| string \| number \| null` | `undefined`  | 选择器的绑定值，可以使用 `v-model` |
-| just-tag       | `Boolean`                                             | `false`      | 使用标签模式                       |
-| options        | `Array`                                               | currencyList | 自定义选项，点此查看               |
-| multiple       | `Boolean`                                             | `false`      | 是否多选                           |
-| labelShowName  | `Boolean`                                             | `true`       | 是否在标签上显示币种名称           |
-| optionShowName | `Boolean`                                             | `true`       | 是否在选项上显示币种名称           |
-| primaryColor   | `String`                                              | `'#2E65FF'`  | 主题颜色，只支持16进制             |
+| Prop Name      | Type                                                | Default       | Description                          |
+| :------------- | --------------------------------------------------- | ------------- | ------------------------------------ |
+| value          | `Array<string \| number> \| string \| number \| null` | `undefined` | 选择器的绑定值，可以使用 `v-model` |
+| justTag        | `Boolean`                                         | `false`     | 使用标签模式                         |
+| options        | `Array`                                           | currencyList  | 自定义选项，点此查看                 |
+| nameField      | `String`                                          | `'name'`    | 名称字段                             |
+| flagField      | `String`                                          | `'flag'`    | 旗帜字段                             |
+| multiple       | `Boolean`                                         | `false`     | 是否多选                             |
+| labelShowName  | `Boolean`                                         | `true`      | 是否在标签上显示币种名称             |
+| optionShowName | `Boolean`                                         | `true`      | 是否在选项上显示币种名称             |
+| primaryColor   | `String`                                          | `'#2E65FF'` | 主题颜色，只支持16进制               |
 
 ## 支持的币种
 
