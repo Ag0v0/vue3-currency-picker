@@ -49,15 +49,15 @@ const form = reactive({
 
 此外，组件本身的props如下：
 
-| Prop Name      | Type                                                  | Default     | Description                        |
-| :------------- | ----------------------------------------------------- | ----------- | ---------------------------------- |
-| value          | `Array<string \| number> \| string \| number \| null` | `undefined` | 选择器的绑定值，可以使用 `v-model` |
-| just-tag       | `Boolean`                                             | `false`     | 使用标签模式                       |
-| options        | `Array`                                               | currencyMap | 自定义选项，点此查看               |
-| multiple       | `Boolean`                                             | `false`     | 是否多选                           |
-| labelShowName  | `Boolean`                                             | `true`      | 是否在标签上显示币种名称           |
-| optionShowName | `Boolean`                                             | `true`      | 是否在选项上显示币种名称           |
-| primaryColor   | `String`                                              | `'#2E65FF'` | 主题颜色，只支持16进制             |
+| Prop Name      | Type                                                  | Default      | Description                        |
+| :------------- | ----------------------------------------------------- | ------------ | ---------------------------------- |
+| value          | `Array<string \| number> \| string \| number \| null` | `undefined`  | 选择器的绑定值，可以使用 `v-model` |
+| just-tag       | `Boolean`                                             | `false`      | 使用标签模式                       |
+| options        | `Array`                                               | currencyList | 自定义选项，点此查看               |
+| multiple       | `Boolean`                                             | `false`      | 是否多选                           |
+| labelShowName  | `Boolean`                                             | `true`       | 是否在标签上显示币种名称           |
+| optionShowName | `Boolean`                                             | `true`       | 是否在选项上显示币种名称           |
+| primaryColor   | `String`                                              | `'#2E65FF'`  | 主题颜色，只支持16进制             |
 
 ## 支持的币种
 
@@ -97,10 +97,10 @@ const form = reactive({
 
 ## 自定义 options
 
-你可以导入组件里的 currencyMap 进行一些修改：
+你可以导入组件里的 currencyList 进行一些修改：
 
 ```
-import { currencyMap } from 'vue3-currency-picker'
+import { currencyList } from 'vue3-currency-picker'
 ```
 
 或者自定义，例如：
